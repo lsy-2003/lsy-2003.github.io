@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="[你的名字] - CS PhD Student at [学校名]">
+    <title>[你的名字] | CS PhD Candidate</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+        
+        /* Header */
+        .header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid #e9ecef;
+        }
+        
+        .header-left h1 {
+            font-size: 2.5rem;
+            color: #1a3e60;
+            margin-bottom: 0.3rem;
+        }
+        
+        .title {
+            font-size: 1.1rem;
+            color: #5a6e7c;
+            margin-bottom: 0.5rem;
+        }
+        
+        .institution {
+            color: #2c7da0;
+            font-weight: 500;
+        }
+        
+        .header-right {
+            text-align: right;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+        
+        .contact-info a {
+            color: #2c7da0;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        .contact-info a:hover {
+            color: #1a4d6b;
+            text-decoration: underline;
+        }
+        
+        /* Navigation */
+        .nav {
+            margin-bottom: 2rem;
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            border-bottom: 1px solid #e9ecef;
+            padding-bottom: 0.8rem;
+        }
+        
+        .nav a {
+            color: #5a6e7c;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        
+        .nav a:hover {
+            color: #2c7da0;
+        }
+        
+        /* Sections */
+        .section {
+            margin-bottom: 2.5rem;
+            scroll-margin-top: 2rem;
+        }
+        
+        .section h2 {
+            font-size: 1.6rem;
+            color: #1a3e60;
+            margin-bottom: 1rem;
+            border-left: 4px solid #2c7da0;
+            padding-left: 1rem;
+        }
+        
+        /* Interests */
+        .interests-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+        
+        .interest-tag {
+            background: #e9ecef;
+            padding: 0.4rem 1rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            color: #2c3e50;
+        }
+        
+        /* Publications */
+        .pub-item {
+            margin-bottom: 1.2rem;
+            padding-left: 0.5rem;
+        }
+        
+        .pub-title {
+            font-weight: 600;
+            font-size: 1rem;
+            color: #1a3e60;
+        }
+        
+        .pub-authors {
+            font-size: 0.9rem;
+            color: #5a6e7c;
+            margin: 0.2rem 0;
+        }
+        
+        .pub-venue {
+            font-size: 0.85rem;
+            color: #2c7da0;
+            font-style: italic;
+        }
+        
+        .pub-links {
+            margin-top: 0.3rem;
+            font-size: 0.85rem;
+        }
+        
+        .pub-links a {
+            color: #2c7da0;
+            text-decoration: none;
+            margin-right: 1rem;
+        }
+        
+        .pub-links a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Education & Service */
+        .edu-item, .service-item {
+            margin-bottom: 1rem;
+        }
+        
+        .edu-degree {
+            font-weight: 600;
+            font-size: 1rem;
+        }
+        
+        .edu-school {
+            color: #2c7da0;
+        }
+        
+        .edu-date {
+            font-size: 0.85rem;
+            color: #7f8c8d;
+            margin-left: 0.5rem;
+        }
+        
+        .service-role {
+            font-weight: 500;
+        }
+        
+        /* Footer */
+        .footer {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #e9ecef;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #7f8c8d;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+            .header-right {
+                text-align: center;
+            }
+            .section h2 {
+                font-size: 1.4rem;
+            }
+            .container {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-left">
+                <h1>[你的名字]</h1>
+                <div class="title">PhD Candidate in Computer Science</div>
+                <div class="institution">[学校名称] · [入学年份] – Present</div>
+            </div>
+            <div class="header-right">
+                <div class="contact-info">
+                    <div>📧 <a href="mailto:[邮箱]">[邮箱]</a></div>
+                    <div>🌐 <a href="https://[你的github].github.io">[你的github].github.io</a></div>
+                    <div>📱 <a href="https://github.com/[你的github]" target="_blank">GitHub</a> · 
+                         <a href="https://scholar.google.com/citations?user=[你的ID]" target="_blank">Google Scholar</a> · 
+                         <a href="https://twitter.com/[你的推特]" target="_blank">Twitter</a></div>
+                    <div>📍 [城市, 国家]</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Navigation (optional) -->
+        <div class="nav">
+            <a href="#interests">Research Interests</a>
+            <a href="#publications">Publications</a>
+            <a href="#education">Education</a>
+            <a href="#service">Services</a>
+            <a href="#contact">Contact</a>
+        </div>
+        
+        <!-- Research Interests -->
+        <div class="section" id="interests">
+            <h2>🔬 Research Interests</h2>
+            <div class="interests-list">
+                <span class="interest-tag">Machine Learning</span>
+                <span class="interest-tag">Computer Vision</span>
+                <span class="interest-tag">Natural Language Processing</span>
+                <span class="interest-tag">Trustworthy AI</span>
+                <span class="interest-tag">Human-Computer Interaction</span>
+                <!-- 根据你的实际兴趣修改 -->
+            </div>
+            <p style="margin-top: 1rem; color: #5a6e7c;">
+                I am broadly interested in [简要描述你的研究兴趣，1-2句话]. 
+                My current research focuses on [具体方向] to address [问题/挑战].
+            </p>
+        </div>
+        
+        <!-- Publications -->
+        <div class="section" id="publications">
+            <h2>📄 Publications</h2>
+            
+            <div class="pub-item">
+                <div class="pub-title">[论文标题]</div>
+                <div class="pub-authors"><strong>[你的名字]</strong>, 合作者A, 合作者B</div>
+                <div class="pub-venue">Conference Name, Year (Acceptance Rate: XX%)</div>
+                <div class="pub-links">
+                    <a href="#">[PDF]</a>
+                    <a href="#">[Code]</a>
+                    <a href="#">[BibTeX]</a>
+                </div>
+            </div>
+            
+            <div class="pub-item">
+                <div class="pub-title">[论文标题]</div>
+                <div class="pub-authors">合作者A, <strong>[你的名字]</strong>, 合作者C</div>
+                <div class="pub-venue">Journal Name, Year (Impact Factor: X.X)</div>
+                <div class="pub-links">
+                    <a href="#">[PDF]</a>
+                    <a href="#">[DOI]</a>
+                </div>
+            </div>
+            
+            <!-- 添加更多论文，按时间倒序排列 -->
+            <p style="margin-top: 1rem; font-size: 0.9rem; color: #7f8c8d;">
+                * indicates equal contribution. Full list on 
+                <a href="https://scholar.google.com/citations?user=[你的ID]" target="_blank">Google Scholar</a>.
+            </p>
+        </div>
+        
+        <!-- Education -->
+        <div class="section" id="education">
+            <h2>🎓 Education</h2>
+            
+            <div class="edu-item">
+                <div class="edu-degree">Ph.D. in Computer Science</div>
+                <div class="edu-school">[学校名称] · [城市, 国家]</div>
+                <div class="edu-date">[入学年份] – Present</div>
+                <div style="font-size: 0.9rem; margin-top: 0.3rem;">Advisor: Prof. [导师姓名]</div>
+            </div>
+            
+            <div class="edu-item">
+                <div class="edu-degree">M.S. in [专业]</div>
+                <div class="edu-school">[本科/硕士学校名称]</div>
+                <div class="edu-date">[毕业年份]</div>
+                <div style="font-size: 0.9rem; margin-top: 0.3rem;">Thesis: [论文题目]</div>
+            </div>
+            
+            <div class="edu-item">
+                <div class="edu-degree">B.S. in [专业]</div>
+                <div class="edu-school">[本科学校名称]</div>
+                <div class="edu-date">[毕业年份]</div>
+            </div>
+        </div>
+        
+        <!-- Services (Academic/Professional) -->
+        <div class="section" id="service">
+            <h2>📌 Services</h2>
+            
+            <div class="service-item">
+                <div class="service-role">Conference Reviewer</div>
+                <div>NeurIPS (2024, 2025) · ICML (2024) · ICLR (2025) · CVPR (2024)</div>
+            </div>
+            
+            <div class="service-item">
+                <div class="service-role">Journal Reviewer</div>
+                <div>IEEE TPAMI · JMLR · TNNLS</div>
+            </div>
+            
+            <div class="service-item">
+                <div class="service-role">Teaching Assistant</div>
+                <div>CS 101: Introduction to Programming (Fall 2024) · CS 201: Data Structures (Spring 2025)</div>
+            </div>
+            
+            <div class="service-item">
+                <div class="service-role">Student Volunteer</div>
+                <div>ICML 2024 · CVPR 2023</div>
+            </div>
+        </div>
+        
+        <!-- Contact Section -->
+        <div class="section" id="contact">
+            <h2>📫 Contact</h2>
+            <p style="margin-bottom: 0.5rem;"><strong>Email:</strong> <a href="mailto:[邮箱]">[邮箱]</a></p>
+            <p style="margin-bottom: 0.5rem;"><strong>Office:</strong> [办公室地址]</p>
+            <p style="margin-bottom: 0.5rem;"><strong>Address:</strong> [学校地址]</p>
+            <p style="margin-top: 1rem;">
+                📝 I am actively looking for collaborations! 
+                Feel free to reach out if you're interested in my research or have any questions.
+            </p>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <p>Last updated: March 2026</p>
+            <p>© 2026 [你的名字] — Designed for clarity and simplicity</p>
+        </div>
+    </div>
+</body>
+</html>
